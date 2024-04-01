@@ -1,0 +1,21 @@
+<html>
+<body style='background-color:cyan';>
+ <div>       
+    <form style="text-align:center;" action="{% url 'reg' %}" method='post'>
+         {% csrf_token %}
+         <br> <h1>Registration </h1>
+        <input type='text' name='first_name' placeholder='Enter your firstname'><br><br>
+        <input type='text' name='last_name' placeholder='Enter your lastname'><br><br>
+        <input type='text' name='username' placeholder='Enter your username'><br><br>
+        <input type='email' name='email' placeholder='Enter your Email id'><br><br>
+        <input type='password' name='password' placeholder='Enter your password'><br><br>
+        <input type='password' name='cpassword' placeholder='Enter your confirm password'><br><br>
+        <input type='submit'>
+    </form>
+    {% for msg in messages %}
+    {{msg}}
+    {% endfor %}
+</div>
+</body>
+</html>
+ 
